@@ -1,23 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=MedievalSharp");
+
 * {
-    border: 1px solid red;
+    cursor: crosshair;
+    
+    text-shadow: 0px 0px 20px red;    
 }
+
+
+@keyframes borderglow {
+    0% {box-shadow: 5px 10px 15px transparent;}  
+    50% {box-shadow: 0px 0px 30px red;}            
+    }   
+
+@keyframes textglow {
+    0% {color: white;}
+    70% {color: red;}
+    80% {color: red;}
+    100% {color: white;}
+    }    
 
 body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     font-family: Roboto;
+    background: url("images/hell.jpg") no-repeat center ;
+    background-size:  100%;
+    width: 100%pv;
+    height: 4600px;
 }
 
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #1F2937;
+    align-content: center;
+    align-self: center;
+    background-color: transparent;
+    width: 95%;
+    border-radius: 30px;
+    border: 5px solid transparent;
+    position: fixed;
+    top: 30px; 
+    animation-name: borderglow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    height: 100px;
+    
 }
 
 .header-logo {
     display: flex;
     justify-self: flex-start;
+    align-items: center;
+    color: white;
+    animation-name: textglow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    font-weight: bolder;
+    font-family: 'MedievalSharp', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+    margin-left: 50px;
+    
 }
 
 .header-links {
@@ -28,77 +72,178 @@ body {
 .header-links ul {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 60px;
+    color: white;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 52px;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+.header-links li:hover {
+    
+    animation-name: textglow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    text-shadow: 0px 0px 15px red;
 }
 
 .container-1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #1F2937;
+    background-color: transparent;
+    margin-top: 300px;
+    
 }
 
 .container-1-left {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
 }
 
 .container-1-left-title {
     display: flex;
     justify-content: left;
+    font-family: 'MedievalSharp', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 48px;
 }
 
 .container-1-left-text {
     display: flex;
     justify-content: left;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 600px;
+    margin-left: 20px;
 }
 
 .container-1-left-button {
+    margin-left: 30px;
     display: flex;
     justify-content: left;
+    align-self: left;
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 120px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 24px;
+    
+    font-family: 'MedievalSharp', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container-1-right {
     display: flex;
+    mix-blend-mode: color-dodge;
+    
+    
+}
+
+.container-1-right img {
+    align-self: center;
+    border-radius: 400px;
+    width: 500px;
+    height: 300px;
+    margin-left: 30px;
 }
 
 .container-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 1000px;
 }
 
 .container-2-title {
     display: flex;
     justify-content: center;
+    color: white;
+    font-size: 60px;
+    font-family: 'MedievalSharp', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    
 }
 
 .container-2-cards {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    gap: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card .name {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'MedievalSharp', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card .quote {
+    margin-top: 20px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.card img {
+    height: 300px;
+    width: 300px;
+    
+
 }
 
 .container-3 {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    margin-top: 1000px;
+    width: 1000px;
+    box-shadow: 0px 0px 30px red;
+    padding: 20px 20px 20px;
+    border-radius: 30px;
 }
 
 .container-3-quote {
     display: flex;
     justify-self: left;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: white;
+    font-size: 24px;
 }
 
 .container-3-author {
     display: flex;
-    justify-self: right;
+    align-self: end;
+    font-family: 'MedievalSharp', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 24px;
+    margin-top: 30px;
 }
 
 
 .container-4 {
     display: flex;
     justify-content: center;
+    margin-top: 1000px;
 }
 
 .container-4-box {
@@ -109,16 +254,21 @@ body {
 .container-t-box-textbox {
     display: flex;
     flex-direction: column;
+    
 }
 
 .container-4-box-title {
     display: flex;
     justify-content: left;
+    color: white;
+    font-size: 24px;
 }
 
 .container-4-box-text {
     display: flex;
     justify-content: left;
+    color: white;
+    font-size: 24px;
 }
 
 .container-4-box-button {
@@ -132,4 +282,5 @@ display: flex;
 justify-content: center;
 justify-self: flex-end;
 background-color: #1F2937;
+height: 100px;
 }
